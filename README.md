@@ -24,6 +24,8 @@ For each movie is available a details page.
 By clicking on a genre the routerLink will change the current path. The tab click activate the slide animation and will show the filtered movies list.
 If we reload the page the movies list will be automatically filtered by the selected genre, by default we show all the available movies.
 
+The movies list is in the movies.json file in the assets folder
+
 The code is linted and some basic unit tests are available.
 
 ## Code Lint
