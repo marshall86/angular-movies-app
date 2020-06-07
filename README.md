@@ -2,9 +2,33 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
 
-## Development server
+Used technologies:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- Angular
+- Angular Material 9.2.4
+- RxJS 6.5.4
+- typescript 3.8.3
+- Sass (SCSS)
+
+Running npm start to lunch the project in a dev server without showing info in the console with live reloading enabled and auto browser open on `http://localhost:4200/`
+
+The project consists in a responsive Angular Movies web application.
+The template include:
+
+- a toolbar always available through all the website;
+- a section with a search box;
+- a tab bar with the movies genres;
+- a list of movies;
+
+For each movie is available a details page.
+By clicking on a genre the routerLink will change the current path. The tab click activate the slide animation and will show the filtered movies list.
+If we reload the page the movies list will be automatically filtered by the selected genre, by default we show all the available movies.
+
+The code is linted and some basic unit tests are available.
+
+## Code Lint
+
+Run npm run lint to lint the code.
 
 ## Code scaffolding
 

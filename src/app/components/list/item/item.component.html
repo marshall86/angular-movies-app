@@ -1,0 +1,21 @@
+<div class="item-container">
+  <mat-card-header>
+    <mat-card-title class="movie-thumb__title">{{ movie?.name }}</mat-card-title>
+  </mat-card-header>
+
+  <div *ngIf="movie?.img" mat-card-image class="movie-thumb__image">
+    <img src="assets/images/movie-covers/{{ movie?.img }}" alt="{{movie?.name}}" />
+  </div>
+
+  <mat-card-content class="movie-thumb__description">
+    <p><b class="extra">Description: </b> {{ movie?.description }}</p>
+
+    <div class="extra">
+      <p><b>Genres: </b>{{movie?.genres}} | <b>Rate: </b>{{movie?.rate}}/10 | <b>Length: </b>{{movie?.length}}</p>
+    </div>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <a mat-raised-button color="primary" class="movie-thumb__view-button">View</a>
+  </mat-card-actions>
+</div>

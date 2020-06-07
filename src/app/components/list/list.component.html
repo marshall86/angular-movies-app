@@ -1,0 +1,14 @@
+<div class="grid marginless">
+
+  <div class="row">
+
+    <mat-card matRipple *ngFor="let movie of movies" class="movie-thumb col-xs4-12 col-md-6 col-lg-3 col-xl-3"
+      routerLink="/movie/{{ movie.key }}">
+
+      <app-item [movie]="movie"></app-item>
+
+    </mat-card>
+
+  </div>
+
+</div>

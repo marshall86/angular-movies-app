@@ -1,1 +1,44 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "../node_modules/material-responsive-grid/material-responsive-grid.css";
+@import './app/breakpoints.scss';
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.page-content {
+
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 65px;
+  margin-bottom: 50px;
+
+  @media #{$mq-small} {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  @media #{$mq-medium} {
+    margin-left: 70px;
+    margin-right: 70px;
+  }
+
+  &.fixed-center {
+
+    @media #{$mq-xlarge} {
+      margin-left: auto;
+      margin-right: auto;
+      width: auto;
+      max-width: 1584px;
+    }
+
+  }
+
+}

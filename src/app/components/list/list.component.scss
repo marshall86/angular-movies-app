@@ -1,0 +1,32 @@
+@import '../../variables.scss';
+
+.grid {
+  .row {
+    margin: 0;
+
+    .movie-thumb {
+      cursor: pointer;
+      background: $card-bg-color;
+      border: 1px solid $border-color;
+      border-radius: 10px;
+      width: 100%;
+    }
+
+    .movie-thumb:hover {
+      background: $card-bg-color-hover;
+      color: #fff;
+      zoom: 1.2;
+      box-shadow: 0 0 0 5px $card-bg-color;
+    }
+  }
+
+  .row>* {
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+}
+
+:host ::ng-deep .extra {
+  display: none;
+}

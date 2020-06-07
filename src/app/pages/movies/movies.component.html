@@ -1,0 +1,29 @@
+<div class="content" role="main">
+  <div class="page-container">
+    <div class="page-content fixed-center">
+
+      <section class="search-container">
+        <input [(ngModel)]="search" name="search" type="search" matInput (ngModelChange)="changed($event)"
+          placeholder="Search" aria-label="Search" />
+        <mat-icon class="search-icon">search</mat-icon>
+      </section>
+
+      <section class="movies-tabs-container">
+        <mat-tab-group color="primary" backgroundColor="primary" animationDuration="2000ms"
+          [selectedIndex]="selectedTab">
+          <mat-tab class="genre-tab" color="primary"
+            *ngFor="let genre of genres | keyvalue: keepOrder; let tabIndex = index;">
+            <ng-template mat-tab-label class="genre-label">
+              <h4 mat-line (click)="changeGenre(genre.value, tabIndex)" class="genre-title"
+                routerLink="/movies/{{genre.value}}">
+                {{ genre.key }}
+              </h4>
+            </ng-template>
+            <app-list [movies]="movies | async"></app-list>
+          </mat-tab>
+        </mat-tab-group>
+      </section>
+
+    </div>
+  </div>
+</div>

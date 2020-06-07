@@ -1,0 +1,22 @@
+  $mq-xsmall: "all and (min-width: 0)";
+  $mq-small: "all and (min-width: 600px)";
+  $mq-medium: "all and (min-width: 960px)";
+  $mq-large: "all and (min-width: 1280px)";
+  $mq-xlarge: "all and (min-width: 1920px)";
+
+  $mobile-small: "all and (min-width: 0) and (max-width: 360px) and (orientation: portrait)";
+  $mobile-large: "all and (min-width: 361px) and (orientation: portrait)";
+  $mobile-small-landscape: "all and (min-width: 0) and (max-width: 480px) and (orientation: landscape)";
+  $mobile-large-landscape: "all and (min-width: 481px) and (orientation: landscape)";
+  $tablet-small-landscape: "all and (min-width: 600px) and (max-width: 960px) and (orientation: landscape)";
+  $tablet-large-landscape: "all and (min-width: 961px) and (orientation: landscape)";
+  $tablet-small: "all and (min-width: 600px) and (orientation: portrait)";
+  $tablet-large: "all and (min-width: 601px) and (max-width: 840px) and (orientation : portrait)";
+  $desktop-x-small-landscape: "all and (min-width: 0) and (max-width: 480px) and (orientation: landscape)";
+  $desktop-x-small: "all and (min-width: 0) and (max-width: 480px) and (max-aspect-ratio: 4/3)";
+  $desktop-small-landscape: "all and (min-width: 481px) and (max-width: 840px) and (orientation: landscape)";
+  $desktop-small: "all and (min-width: 481px) and (max-width: 840px) and (max-aspect-ratio: 4/3)";
+  $desktop-medium-landscape: "all and (min-width: 841px) and (max-width: 1280px) and (orientation: landscape)";
+  $desktop-medium: "all and (min-width: 841px) and (max-width: 1280px) and (max-aspect-ratio: 4/3)";
+  $desktop-large: "all and (min-width: 1281px) and (max-width: 1600px)";
+  $desktop-xlarge: "all and (min-width: 1601px) and (max-width: 1920px)";

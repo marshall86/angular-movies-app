@@ -1,14 +1,19 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "outDir": "./out-tsc/app",
-    "types": []
+    "outDir": "../out-tsc/app",
+    "baseUrl": "./",
+    "module": "esNext",
+    "types": [
+      "node"
+    ]
   },
-  "files": [
-    "src/main.ts",
-    "src/polyfills.ts"
-  ],
-  "include": [
-    "src/**/*.d.ts"
+  "exclude": [
+    "src/test.ts",
+    "**/*.spec.ts",
+    "e2e/**",
+    "karma.conf.js",
+    "src/environments/**",
+    "mock-services/**"
   ]
 }

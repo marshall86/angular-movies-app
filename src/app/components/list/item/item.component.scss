@@ -1,0 +1,23 @@
+.mat-card-header {
+  justify-content: center;
+}
+
+.movie-thumb__image {
+  text-align: center;
+  height: 275px;
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.movie-thumb__description {
+  // height: 80px;
+  height: 100px;
+  padding: 0 10px;
+}
+
+.mat-card-actions {
+  padding: 0 10px;
+}

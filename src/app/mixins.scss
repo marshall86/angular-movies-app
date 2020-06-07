@@ -1,0 +1,13 @@
+@mixin page-layout() {
+  display: block;
+  min-height: 100%;
+  overflow: auto;
+  position: relative;
+}
+
+@mixin fxFlexLayoutFix() {
+  min-width: initial !important;
+  max-width: initial !important;
+  min-height: initial !important;
+  max-height: initial !important;
+}

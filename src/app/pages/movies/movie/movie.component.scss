@@ -1,0 +1,16 @@
+@import '../movies.component.scss';
+@import '../../../variables.scss';
+
+.page-content {
+  background: $card-bg-color;
+  border: 1px solid $border-color;
+  display: block;
+  border-radius: 10px;
+  padding: 20px;
+  color: #fff;
+  height: 100%;
+}
+
+:host ::ng-deep .mat-card-actions {
+  display: none;
+}
