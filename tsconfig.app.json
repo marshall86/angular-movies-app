@@ -4,9 +4,7 @@
     "outDir": "../out-tsc/app",
     "baseUrl": "./",
     "module": "esNext",
-    "types": [
-      "node"
-    ]
+    "types": ["node"]
   },
   "exclude": [
     "src/test.ts",
@@ -14,6 +12,8 @@
     "e2e/**",
     "karma.conf.js",
     "src/environments/**",
-    "mock-services/**"
+    "mock-services/**",
+    "dist/",
+    "docs/"
   ]
 }
