@@ -6,12 +6,16 @@ import { Movie } from '../interfaces/movies/Imovies';
 import { DataService } from '../data/data.service';
 import { GenreType } from 'src/app/models/movie.model';
 import { Observable } from 'rxjs/internal/Observable';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Injectable({
   providedIn: 'root',
 })
 export class MoviesService {
-  constructor(private dataService: DataService) {}
+  constructor(
+    private dataService: DataService,
+    private sanitizer: DomSanitizer
+  ) {}
 
   getMoviesList(): Observable<Movie[]> {
     return this.dataService.getData('movies.json').pipe(
@@ -28,7 +32,11 @@ export class MoviesService {
   getMovieByKey(key: string): Observable<Movie> {
     return this.dataService.getData('movies.json').pipe(
       catchError((err) => this.handleError(err)),
-      map((movies: Movie[]) => movies.find((m: Movie) => m.key === key))
+      map((movies: Movie[]) => movies.find((m: Movie) => m.key === key)),
+      map((m: Movie) => ({
+        ...m,
+        url: this.sanitizer.bypassSecurityTrustResourceUrl(m.video),
+      }))
     );
   }
 

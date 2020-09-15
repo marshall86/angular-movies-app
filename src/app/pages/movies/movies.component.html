@@ -9,7 +9,7 @@
       </section>
 
       <section class="movies-tabs-container">
-        <mat-tab-group color="primary" backgroundColor="primary" animationDuration="2000ms"
+        <mat-tab-group *ngIf="movies | async as m" color="primary" backgroundColor="primary" animationDuration="2000ms"
           [selectedIndex]="selectedTab">
           <mat-tab class="genre-tab" color="primary"
             *ngFor="let genre of genres | keyvalue: keepOrder; let tabIndex = index;">
@@ -19,7 +19,7 @@
                 {{ genre.key }}
               </h4>
             </ng-template>
-            <app-list [movies]="movies | async"></app-list>
+            <app-list [movies]="m"></app-list>
           </mat-tab>
         </mat-tab-group>
       </section>

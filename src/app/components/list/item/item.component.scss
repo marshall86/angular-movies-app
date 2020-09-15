@@ -12,12 +12,20 @@
   }
 }
 
+.movie-thumb__title {
+  font-size: 22px !important;
+}
+
 .movie-thumb__description {
-  // height: 80px;
   height: 100px;
   padding: 0 10px;
 }
 
 .mat-card-actions {
   padding: 0 10px;
+}
+
+.movie-trailer-container {
+  width: 100%;
+  height: 500px;
 }

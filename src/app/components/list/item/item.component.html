@@ -7,11 +7,17 @@
     <img src="assets/images/movie-covers/{{ movie?.img }}" alt="{{movie?.name}}" />
   </div>
 
-  <mat-card-content class="movie-thumb__description">
-    <p><b class="extra">Description: </b> {{ movie?.description }}</p>
+  <mat-card-content *ngIf="movieDetails" class="movie-thumb__description">
+    <p><b>Description: </b> {{ movie?.description }}</p>
 
-    <div class="extra">
+    <div>
       <p><b>Genres: </b>{{movie?.genres}} | <b>Rate: </b>{{movie?.rate}}/10 | <b>Length: </b>{{movie?.length}}</p>
+    </div>
+  </mat-card-content>
+
+  <mat-card-content *ngIf="movieDetails">
+    <div class="movie-trailer-container">
+      <iframe frameborder="0" height="100%" width="100%" [src]="movie?.url"></iframe>
     </div>
   </mat-card-content>
 

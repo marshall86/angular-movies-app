@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, AfterContentInit } from '@angular/core';
 import { Movie } from 'src/app/services/interfaces/movies/Imovies';
 
 @Component({
@@ -8,4 +8,5 @@ import { Movie } from 'src/app/services/interfaces/movies/Imovies';
 })
 export class ItemComponent {
   @Input() movie: Movie;
+  @Input() movieDetails: boolean;
 }

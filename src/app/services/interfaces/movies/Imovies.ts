@@ -1,5 +1,6 @@
 import { GenreType } from 'src/app/models/movie.model';
 import { Observable } from 'rxjs';
+import { SafeUrl } from '@angular/platform-browser';
 
 export interface Movie {
   id: number;
@@ -10,6 +11,8 @@ export interface Movie {
   length: string;
   img: string;
   genres: GenreType;
+  video: string;
+  url: SafeUrl;
 }
 
 export abstract class IMoviesService {
